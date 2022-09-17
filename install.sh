@@ -6,14 +6,14 @@ else
   echo "Nix already installed: $(nix-env --version)"
 fi
 
-nix-env -iA --dry-run \
+nix-env -iA \
   nixpkgs.zsh \
   nixpkgs.git \
   nixpkgs.gum \
   nixpkgs.stow \
-	nixpkgs.neovim \
+  nixpkgs.neovim \
   nixpkgs.bat \
   nixpkgs.delta
 
-stow packages/git
+stow -d ./packages -t "${HOME}" git
 
