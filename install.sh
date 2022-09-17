@@ -18,4 +18,5 @@ nix-env -iA \
 
 stow -d ./packages -t "${HOME}" git
 stow -d ./packages -t "${HOME}" zsh
+stow -d ./packages -t "${HOME}/.config" neovim
 

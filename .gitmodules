@@ -1,0 +1,3 @@
+[submodule "packages/neovim/nvim"]
+	path = packages/neovim/nvim
+	url = git@github.com:erikkrieg/nvim.git
