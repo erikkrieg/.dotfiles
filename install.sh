@@ -13,7 +13,8 @@ nix-env -iA \
   nixpkgs.stow \
   nixpkgs.neovim \
   nixpkgs.bat \
-  nixpkgs.delta
+  nixpkgs.delta \
+  nixpkgs.gh
 
 stow -d ./packages -t "${HOME}" git
 
