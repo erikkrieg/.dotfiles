@@ -18,7 +18,6 @@ nix-env -iA \
   nixpkgs.fzf \
   nixpkgs.jq \
   nixpkgs.exa \
-  nixpkgs.tree \
   nixpkgs.ripgrep \
   nixpkgs.alacritty \
   nixpkgs.iterm2
