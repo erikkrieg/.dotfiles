@@ -20,3 +20,5 @@ stow -d ./packages -t "${HOME}" git
 stow -d ./packages -t "${HOME}" zsh
 stow -d ./packages -t "${HOME}/.config" neovim
 
+nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+~/.local/share/nvim/site/pack/packer/start/cmp-tabnine/install.sh
