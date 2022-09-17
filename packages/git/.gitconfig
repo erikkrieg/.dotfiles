@@ -1,0 +1,8 @@
+[user]
+  name = Erik Krieg
+  email = 10244162+erikkrieg@users.noreply.github.com
+[core]
+  editor = nvim
+[init]
+  defaultBranch = main
+
