@@ -14,7 +14,8 @@ nix-env -iA \
   nixpkgs.neovim \
   nixpkgs.bat \
   nixpkgs.delta \
-  nixpkgs.gh
+  nixpkgs.gh \
+  nixpkgs.fzf
 
 stow -d ./packages -t "${HOME}" git
 stow -d ./packages -t "${HOME}" zsh
