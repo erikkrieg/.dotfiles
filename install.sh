@@ -19,7 +19,9 @@ nix-env -iA \
   nixpkgs.jq \
   nixpkgs.exa \
   nixpkgs.tree \
-  nixpkgs.ripgrep
+  nixpkgs.ripgrep \
+  nixpkgs.alacritty \
+  nixpkgs.iterm2
 
 stow -d ./packages -t "${HOME}" git
 stow -d ./packages -t "${HOME}" zsh
