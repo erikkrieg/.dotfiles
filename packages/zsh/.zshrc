@@ -13,3 +13,5 @@ alias tree="ls --tree"
 alias cat="bat -pp"
 alias less="bat -p"
 
+export BAT_THEME="Dracula"
+
