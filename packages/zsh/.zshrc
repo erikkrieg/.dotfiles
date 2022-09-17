@@ -8,3 +8,8 @@ alias ls="exa --group-directories-first"
 alias la="ls -a"
 alias l="ls -la --git"
 alias tree="ls --tree"
+
+# bat aliases
+alias cat="bat -pp"
+alias less="bat -p"
+
