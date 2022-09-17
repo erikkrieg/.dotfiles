@@ -27,5 +27,8 @@ stow -d ./packages -t "${HOME}" git
 stow -d ./packages -t "${HOME}" zsh
 stow -d ./packages -t "${HOME}/.config" neovim
 
+# MacOS Applications
+stow -d "$(nix-env -q --installed iterm2 --out-path --no-name)" -t /Applications Applications
+
 nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 ~/.local/share/nvim/site/pack/packer/start/cmp-tabnine/install.sh
