@@ -17,4 +17,5 @@ nix-env -iA \
   nixpkgs.gh
 
 stow -d ./packages -t "${HOME}" git
+stow -d ./packages -t "${HOME}" zsh
 
