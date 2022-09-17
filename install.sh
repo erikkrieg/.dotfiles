@@ -15,7 +15,11 @@ nix-env -iA \
   nixpkgs.bat \
   nixpkgs.delta \
   nixpkgs.gh \
-  nixpkgs.fzf
+  nixpkgs.fzf \
+  nixpkgs.jq \
+  nixpkgs.exa \
+  nixpkgs.tree \
+  nixpkgs.ripgrep
 
 stow -d ./packages -t "${HOME}" git
 stow -d ./packages -t "${HOME}" zsh
