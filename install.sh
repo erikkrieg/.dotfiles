@@ -6,6 +6,14 @@ else
   echo "Nix already installed: $(nix-env --version)"
 fi
 
+# While I'd like to be entirely using Nix, there is a large gap of supported
+# packages for MacOS.
+if [ -z $(command -v brew) ]; then
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+else
+  echo "Homebrew already installed: $(brew --version)"
+fi
+
 nix-env -iA \
   nixpkgs.zsh \
   nixpkgs.zinit \
