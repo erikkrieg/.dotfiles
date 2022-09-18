@@ -8,6 +8,7 @@ fi
 
 nix-env -iA \
   nixpkgs.zsh \
+  nixpkgs.zinit \
   nixpkgs.git \
   nixpkgs.gum \
   nixpkgs.stow \
@@ -25,6 +26,8 @@ nix-env -iA \
 stow -d ./packages -t "${HOME}" git
 stow -d ./packages -t "${HOME}" zsh
 stow -d ./packages -t "${HOME}/.config" neovim
+
+stow -d "$(nix-env -q --installed zinit --out-path --no-name)" -t "${HOME}/.local/share" share
 
 # MacOS Applications
 stow -d "$(nix-env -q --installed iterm2 --out-path --no-name)" -t /Applications Applications

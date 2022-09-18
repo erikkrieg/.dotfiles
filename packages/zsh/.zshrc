@@ -1,3 +1,6 @@
+export ZINIT_HOME="${HOME}/.local/share/zinit"
+source "${ZINIT_HOME}/zinit.zsh"
+
 alias c="clear"
 alias gs="git status"
 alias p="pbcopy"
@@ -14,4 +17,6 @@ alias cat="bat -pp"
 alias less="bat -p"
 
 export BAT_THEME="Dracula"
+
+zinit snippet OMZ::plugins/git/git.plugin.zsh
 
