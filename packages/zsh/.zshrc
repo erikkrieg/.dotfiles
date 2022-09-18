@@ -1,6 +1,9 @@
 ZINIT_HOME="${HOME}/.local/share/zinit"
 source "${ZINIT_HOME}/zinit.zsh"
 
+zinit ice pick"async.zsh" src"pure.zsh" # with zsh-async library that's bundled with it.
+zinit light sindresorhus/pure
+
 alias c="clear"
 alias gs="git status"
 alias p="pbcopy"
