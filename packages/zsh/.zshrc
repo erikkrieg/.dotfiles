@@ -1,4 +1,4 @@
-export ZINIT_HOME="${HOME}/.local/share/zinit"
+ZINIT_HOME="${HOME}/.local/share/zinit"
 source "${ZINIT_HOME}/zinit.zsh"
 
 alias c="clear"
