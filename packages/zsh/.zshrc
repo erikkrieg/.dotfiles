@@ -18,6 +18,11 @@ alias less="bat -p"
 
 export BAT_THEME="Dracula"
 
+zinit ice wait'!0'
 zinit snippet OMZ::lib/git.zsh
+zinit ice wait'!0'
 zinit snippet OMZ::plugins/git/git.plugin.zsh
-
+zinit ice wait'!0'
+zinit light zsh-users/zsh-completions
+zinit ice wait lucid atload'_zsh_autosuggest_start'
+zinit light zsh-users/zsh-autosuggestions
