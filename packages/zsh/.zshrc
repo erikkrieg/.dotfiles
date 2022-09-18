@@ -18,5 +18,6 @@ alias less="bat -p"
 
 export BAT_THEME="Dracula"
 
+zinit snippet OMZ::lib/git.zsh
 zinit snippet OMZ::plugins/git/git.plugin.zsh
 
