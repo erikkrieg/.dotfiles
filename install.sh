@@ -31,6 +31,8 @@ nix-env -iA \
   nixpkgs.alacritty \
   nixpkgs.iterm2
 
+brew install --cask brave-browser
+
 stow -d ./packages -t "${HOME}" git
 stow -d ./packages -t "${HOME}" zsh
 stow -d ./packages -t "${HOME}/.config" neovim
