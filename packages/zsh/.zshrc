@@ -1,10 +1,8 @@
 ZINIT_HOME="${HOME}/.local/share/zinit"
 source "${ZINIT_HOME}/zinit.zsh"
 
+source ~/.config/zsh/prompt.zsh
 source ~/.config/zsh/nvim-mode.zsh
-
-zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
-zinit light sindresorhus/pure
 
 alias c="clear"
 alias gs="git status"

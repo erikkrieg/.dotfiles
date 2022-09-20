@@ -10,3 +10,6 @@ autoload edit-command-line
 zle -N edit-command-line
 bindkey '^v' edit-command-line
 
+# There is also a home manager way to source this that I should investigate.
+zinit ice depth=1; zinit light jeffreytse/zsh-vi-mode
+
