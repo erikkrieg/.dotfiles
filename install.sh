@@ -48,3 +48,6 @@ sudo chsh -s "$(which zsh)" $USER        # Use zsh (installed by nix) as default
 
 nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 ~/.local/share/nvim/site/pack/packer/start/cmp-tabnine/install.sh
+
+# Disables login log from new shell instances.
+touch ~/.hushlogin
