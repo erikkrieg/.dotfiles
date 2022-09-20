@@ -33,6 +33,9 @@ zinit ice wait'!0'
 zinit light zsh-users/zsh-completions
 zinit ice wait lucid atload'_zsh_autosuggest_start'
 zinit light zsh-users/zsh-autosuggestions
+
+# Should be sourced last:
+# https://github.com/zsh-users/zsh-syntax-highlighting#faq
 zinit ice wait'!0'
 zinit light zsh-users/zsh-syntax-highlighting
 
