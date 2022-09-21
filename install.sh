@@ -29,10 +29,13 @@ nix-env -iA \
   nixpkgs.exa \
   nixpkgs.ripgrep \
   nixpkgs.alacritty \
-  nixpkgs.iterm2
+  nixpkgs.iterm2 \
+  nixpkgs.direnv \
+  nixpkgs.nix-direnv
 
 brew install --cask brave-browser
 
+stow -d ./packages -t "${HOME}" direnv
 stow -d ./packages -t "${HOME}" git
 stow -d ./packages -t "${HOME}" zsh
 stow -d ./packages -t "${HOME}/.config" neovim

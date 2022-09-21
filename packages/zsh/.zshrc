@@ -39,3 +39,4 @@ zinit light zsh-users/zsh-autosuggestions
 zinit ice wait'!0'
 zinit light zsh-users/zsh-syntax-highlighting
 
+eval "$(direnv hook zsh)"
