@@ -14,24 +14,24 @@ else
   echo "Homebrew already installed: $(brew --version)"
 fi
 
-nix-env -iA \
-  nixpkgs.zsh \
-  nixpkgs.zinit \
-  nixpkgs.git \
-  nixpkgs.gum \
-  nixpkgs.stow \
-  nixpkgs.neovim \
-  nixpkgs.bat \
-  nixpkgs.delta \
-  nixpkgs.gh \
-  nixpkgs.fzf \
-  nixpkgs.jq \
-  nixpkgs.exa \
-  nixpkgs.ripgrep \
-  nixpkgs.alacritty \
-  nixpkgs.iterm2 \
-  nixpkgs.direnv \
-  nixpkgs.nix-direnv
+nix-env -f '<nixpkgs>' -iA \
+  zsh \
+  zinit \
+  git \
+  gum \
+  stow \
+  neovim \
+  bat \
+  delta \
+  gh \
+  fzf \
+  jq \
+  exa \
+  ripgrep \
+  alacritty \
+  iterm2 \
+  direnv \
+  nix-direnv
 
 brew install --cask brave-browser
 
