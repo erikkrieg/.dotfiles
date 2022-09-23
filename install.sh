@@ -36,10 +36,12 @@ nix-env -f '<nixpkgs>' -iA \
 brew install --cask brave-browser
 brew install --cask spotify
 
+# Trying different ways of stowing because I'm not sure what my preference is yet.
 stow -d ./packages -t "${HOME}" direnv
 stow -d ./packages -t "${HOME}" git
 stow -d ./packages -t "${HOME}" zsh
 stow -d ./packages -t "${HOME}/.config" neovim
+stow -d ./packages -t "${HOME}" alacritty
 
 stow -d "$(nix-env -q --installed zinit --out-path --no-name)" -t "${HOME}/.local/share" share
 

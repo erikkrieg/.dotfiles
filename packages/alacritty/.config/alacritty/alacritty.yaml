@@ -1,0 +1,3 @@
+key_bindings:
+- { key: N, mods: Command, action: SpawnNewInstance }
+
