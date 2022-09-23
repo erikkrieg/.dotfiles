@@ -34,6 +34,7 @@ nix-env -f '<nixpkgs>' -iA \
   nix-direnv
 
 brew install --cask brave-browser
+brew install --cask spotify
 
 stow -d ./packages -t "${HOME}" direnv
 stow -d ./packages -t "${HOME}" git
