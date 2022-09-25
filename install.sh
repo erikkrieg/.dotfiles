@@ -31,7 +31,8 @@ nix-env -f '<nixpkgs>' -iA \
   alacritty \
   iterm2 \
   direnv \
-  nix-direnv
+  nix-direnv \
+  dash
 
 brew install --cask brave-browser
 brew install --cask spotify
