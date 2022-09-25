@@ -50,8 +50,10 @@ stow -d "$(nix-env -q --installed zinit --out-path --no-name)" -t "${HOME}/.loca
 stow -d "$(nix-env -q --installed iterm2 --out-path --no-name)" -t /Applications Applications
 stow -d "$(nix-env -q --installed alacritty --out-path --no-name)" -t /Applications Applications
 
-command -v zsh | sudo tee -a /etc/shell  # Use zsh as login shell
-sudo chsh -s "$(which zsh)" $USER        # Use zsh (installed by nix) as default shell
+if [ "${SHELL}" != "$(which zsh)" ]; then
+  command -v zsh | sudo tee -a /etc/shell  # Use zsh as login shell
+  sudo chsh -s "$(which zsh)" $USER        # Use zsh (installed by nix) as default shell
+fi
 
 nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 ~/.local/share/nvim/site/pack/packer/start/cmp-tabnine/install.sh
