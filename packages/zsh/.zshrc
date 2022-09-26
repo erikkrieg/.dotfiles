@@ -28,19 +28,14 @@ export FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git'"
 export FZF_DEFAULT_OPTS="--height=60% --layout=reverse --border --margin=1 --padding=1"
 export PATH=/opt/homebrew/bin:$PATH
 
-zinit ice wait'!0'
-zinit snippet OMZ::lib/git.zsh
-zinit ice wait'!0'
-zinit snippet OMZ::plugins/git/git.plugin.zsh
-zinit ice wait'!0'
-zinit light zsh-users/zsh-completions
-zinit ice wait lucid atload'_zsh_autosuggest_start'
-zinit light zsh-users/zsh-autosuggestions
+zinit ice wait'!0'; zinit snippet OMZ::lib/git.zsh
+zinit ice wait'!0'; zinit snippet OMZ::plugins/git/git.plugin.zsh
+zinit ice wait'!0'; zinit light zsh-users/zsh-completions
+zinit ice wait lucid atload'_zsh_autosuggest_start'; zinit light zsh-users/zsh-autosuggestions
 
 # Should be sourced last:
 # https://github.com/zsh-users/zsh-syntax-highlighting#faq
-zinit ice wait'!0'
-zinit light zsh-users/zsh-syntax-highlighting
+zinit ice wait'!0'; zinit light zsh-users/zsh-syntax-highlighting
 
 # Case insensitive completions
 zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 
