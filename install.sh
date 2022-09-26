@@ -32,7 +32,9 @@ nix-env -f '<nixpkgs>' -iA \
   iterm2 \
   direnv \
   nix-direnv \
-  dash
+  dash \
+  nodePackages.bash-language-server \
+  shellcheck
 
 brew install --cask brave-browser
 brew install --cask spotify
