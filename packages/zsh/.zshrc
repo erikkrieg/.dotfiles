@@ -15,6 +15,9 @@ alias ls="exa --group-directories-first"
 alias la="ls -a"
 alias l="ls -la --git"
 alias tree="ls --tree -a -I='.git'"
+alias tree2="tree --level=2"
+alias tree3="tree --level=3"
+alias tree4="tree --level=4"
 
 # bat aliases
 alias cat="bat -pp"
