@@ -1,5 +1,7 @@
+#!/bin/sh
+
 # Nix as a package manager
-if [ -z $(command -v nix-env) ]; then
+if [ -z "$(command -v nix-env)" ]; then
   curl -L https://nixos.org/nix/install | sh
   . /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
 else
@@ -8,7 +10,7 @@ fi
 
 # While I'd like to be entirely using Nix, there is a large gap of supported
 # packages for MacOS.
-if [ -z $(command -v brew) ]; then
+if [ -z "$(command -v brew)" ]; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 else
   echo "Homebrew already installed: $(brew --version)"
@@ -55,7 +57,7 @@ stow -d "$(nix-env -q --installed alacritty --out-path --no-name)" -t /Applicati
 
 if [ "${SHELL}" != "$(which zsh)" ]; then
   command -v zsh | sudo tee -a /etc/shell  # Use zsh as login shell
-  sudo chsh -s "$(which zsh)" $USER        # Use zsh (installed by nix) as default shell
+  sudo chsh -s "$(which zsh)" "${USER}"    # Use zsh (installed by nix) as default shell
 fi
 
 # Install or sync neovim plugins
