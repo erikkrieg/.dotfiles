@@ -28,6 +28,7 @@ export FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git'"
 export FZF_DEFAULT_OPTS="--height=60% --layout=reverse --border --margin=1 --padding=1"
 export PATH=/opt/homebrew/bin:$PATH
 
+zinit ice wait'!0'; zinit snippet OMZ::lib/history.zsh
 zinit ice wait'!0'; zinit snippet OMZ::lib/git.zsh
 zinit ice wait'!0'; zinit snippet OMZ::plugins/git/git.plugin.zsh
 zinit ice wait'!0'; zinit light zsh-users/zsh-completions
