@@ -42,4 +42,9 @@ zinit light zsh-users/zsh-autosuggestions
 zinit ice wait'!0'
 zinit light zsh-users/zsh-syntax-highlighting
 
+# Case insensitive completions
+zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 
+autoload -Uz compinit && compinit
+
 eval "$(direnv hook zsh)"
+
