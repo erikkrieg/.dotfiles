@@ -63,6 +63,13 @@ if [ "${SHELL}" != "${ZSH}" ]; then
   sudo chsh -s "${ZSH}" "${USER}"           # Use zsh (installed by nix) as default shell
 fi
 
+# Set sh to execute dash because it is faster than bash
+# Important: dash doesn't support parts of bash because it isn't a superset of posix
+DASH="${NIX_PROFILE_BIN}/dash"
+if [ "$(readlink /var/select/sh)" != "${DASH}" ]; then
+  sudo ln -sf "${DASH}" /var/select/sh
+fi
+
 # Install or sync neovim plugins
 nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 ~/.local/share/nvim/site/pack/packer/start/cmp-tabnine/install.sh
