@@ -56,6 +56,7 @@ if [ "${SHELL}" != "$(which zsh)" ]; then
   sudo chsh -s "$(which zsh)" $USER        # Use zsh (installed by nix) as default shell
 fi
 
+# Install or sync neovim plugins
 nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 ~/.local/share/nvim/site/pack/packer/start/cmp-tabnine/install.sh
 
