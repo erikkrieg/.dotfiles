@@ -14,7 +14,7 @@ alias vf='nvim "$(fzf)"'
 alias ls="exa --group-directories-first"
 alias la="ls -a"
 alias l="ls -la --git"
-alias tree="ls --tree"
+alias tree="ls --tree -a -I='.git'"
 
 # bat aliases
 alias cat="bat -pp"
