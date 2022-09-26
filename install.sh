@@ -16,6 +16,7 @@ else
   echo "Homebrew already installed: $(brew --version)"
 fi
 
+NIX_PROFILE_BIN="${HOME}/.nix-profile/bin"
 nix-env -f '<nixpkgs>' -iA \
   zsh \
   zinit \
@@ -55,9 +56,11 @@ stow -d "$(nix-env -q --installed zinit --out-path --no-name)" -t "${HOME}/.loca
 stow -d "$(nix-env -q --installed iterm2 --out-path --no-name)" -t /Applications Applications
 stow -d "$(nix-env -q --installed alacritty --out-path --no-name)" -t /Applications Applications
 
-if [ "${SHELL}" != "$(which zsh)" ]; then
-  command -v zsh | sudo tee -a /etc/shell  # Use zsh as login shell
-  sudo chsh -s "$(which zsh)" "${USER}"    # Use zsh (installed by nix) as default shell
+# Set zsh as the default shell
+ZSH="${NIX_PROFILE_BIN}/zsh"
+if [ "${SHELL}" != "${ZSH}" ]; then
+  command -v zsh | sudo tee -a /etc/shell   # Use zsh as login shell
+  sudo chsh -s "${ZSH}" "${USER}"           # Use zsh (installed by nix) as default shell
 fi
 
 # Install or sync neovim plugins
