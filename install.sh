@@ -37,12 +37,12 @@ nix-env -f '<nixpkgs>' -iA \
   nix-direnv \
   dash \
   nodePackages.bash-language-server \
-  shellcheck
+  shellcheck \
+  zellij
 
 brew install --cask brave-browser
 brew install --cask spotify
 brew install --cask discord
-brew install --cask zoomus
 
 # Trying different ways of stowing because I'm not sure what my preference is yet.
 stow -d ./packages -t "${HOME}" direnv
