@@ -44,3 +44,4 @@ autoload -Uz compinit && compinit
 
 eval "$(direnv hook zsh)"
 
+eval "$(zellij setup --generate-auto-start zsh)"
