@@ -35,7 +35,6 @@ nix-env -f '<nixpkgs>' -iA \
   iterm2 \
   direnv \
   nix-direnv \
-  dash \
   nodePackages.bash-language-server \
   shellcheck \
   zellij
@@ -66,7 +65,7 @@ fi
 
 # Set sh to execute dash because it is faster than bash
 # Important: dash doesn't support parts of bash because it isn't a superset of posix
-DASH="${NIX_PROFILE_BIN}/dash"
+DASH="/bin/dash"
 if [ "$(readlink /var/select/sh)" != "${DASH}" ]; then
   sudo ln -sf "${DASH}" /var/select/sh
 fi
