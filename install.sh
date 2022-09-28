@@ -73,7 +73,13 @@ fi
 
 # Install or sync neovim plugins
 nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
-~/.local/share/nvim/site/pack/packer/start/cmp-tabnine/install.sh
+
+CMP_TABNINE_PATH="${HOME}/.local/share/nvim/site/pack/packer/start/cmp-tabnine"
+if [ ! -f "${CMP_TABNINE_PATH}/binaries/.active" ]; then
+  "${CMP_TABNINE_PATH}/install.sh"
+else
+  echo "TabNine already installed: $(cat "$CMP_TABNINE_PATH/binaries/.active")"
+fi
 
 # Disables login log from new shell instances.
 touch ~/.hushlogin
