@@ -49,6 +49,7 @@ stow -d ./packages -t "${HOME}" git
 stow -d ./packages -t "${HOME}" zsh
 stow -d ./packages -t "${HOME}/.config" neovim
 stow -d ./packages -t "${HOME}" alacritty
+stow -d ./packages -t "${HOME}" zellij
 
 stow -d "$(nix-env -q --installed zinit --out-path --no-name)" -t "${HOME}/.local/share" share
 
