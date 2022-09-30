@@ -83,3 +83,4 @@ fi
 
 # Disables login log from new shell instances.
 touch ~/.hushlogin
+

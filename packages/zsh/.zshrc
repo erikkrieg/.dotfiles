@@ -38,9 +38,11 @@ zinit ice wait lucid atload'_zsh_autosuggest_start'; zinit light zsh-users/zsh-a
 # https://github.com/zsh-users/zsh-syntax-highlighting#faq
 zinit ice wait'!0'; zinit light zsh-users/zsh-syntax-highlighting
 
+source "${HOME}/.config/zsh/functions.zsh"
+
 # Case insensitive completions
 zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 
-autoload -Uz compinit && compinit
+autoload -Uz compinit && compinit -i
 
 eval "$(direnv hook zsh)"
 

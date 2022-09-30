@@ -1,0 +1,2 @@
+# Current intention is for this directory to only contain 3rd party functions.
+packages/zsh/.config/zsh/functions/_*
