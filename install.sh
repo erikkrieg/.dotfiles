@@ -27,6 +27,7 @@ nix-env -f '<nixpkgs>' -iA \
   bat \
   delta \
   gh \
+  fd \
   fzf \
   jq \
   exa \
