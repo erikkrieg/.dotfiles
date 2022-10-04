@@ -44,6 +44,7 @@ brew install --cask brave-browser
 brew install --cask spotify
 brew install --cask discord
 brew install --cask obsidian
+brew install --cask rancher
 
 # Trying different ways of stowing because I'm not sure what my preference is yet.
 stow -d ./packages -t "${HOME}" direnv
