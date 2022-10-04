@@ -26,6 +26,7 @@ nix-env -f '<nixpkgs>' -iA \
   neovim \
   bat \
   delta \
+  docker \
   gh \
   fd \
   fzf \
