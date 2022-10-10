@@ -39,7 +39,8 @@ nix-env -f '<nixpkgs>' -iA \
   nix-direnv \
   nodePackages.bash-language-server \
   shellcheck \
-  zellij
+  zellij \
+  just
 
 brew install --cask brave-browser
 brew install --cask spotify
