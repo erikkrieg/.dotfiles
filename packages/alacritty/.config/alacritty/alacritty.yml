@@ -26,7 +26,7 @@ chars:
 
 key_bindings:
 - { key: W, mods: Command, action: Quit }
-- { key: N, mods: Command, action: SpawnNewInstance }
+- { key: N, mods: Command|Shift, action: SpawnNewInstance }
 - { key: F, mods: Command|Shift, action: ToggleFullscreen }
 
 # Zellij doesn't support Command mod key but Alacritty does.
