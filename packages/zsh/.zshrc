@@ -23,6 +23,9 @@ alias tree4="tree --level=4"
 alias cat="bat -pp"
 alias less="bat -p"
 
+# nix aliases
+alias np="nix profile --extra-experimental-features nix-command"
+
 export BAT_THEME="Dracula"
 export FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git'"
 export FZF_DEFAULT_OPTS="--height=60% --layout=reverse --border --margin=1 --padding=1"
